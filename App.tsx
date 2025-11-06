@@ -131,7 +131,7 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      {currentView === 'chat' && (
+      {currentView === 'chat' ? (
         <footer className="p-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 sticky bottom-0">
           <div className="max-w-4xl mx-auto">
             <div className="relative">
@@ -154,7 +154,16 @@ const App: React.FC = () => {
                 <SendIcon className="w-6 h-6" />
               </button>
             </div>
+            <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-2">
+              © {new Date().getFullYear()} Pritam nath dipta. All rights reserved.
+            </p>
           </div>
+        </footer>
+      ) : (
+        <footer className="p-4 border-t border-gray-200 dark:border-gray-700 bg-orange-50 dark:bg-gray-900">
+           <p className="text-center text-xs text-gray-500 dark:text-gray-400">
+              © {new Date().getFullYear()} Pritam nath dipta. All rights reserved.
+            </p>
         </footer>
       )}
     </div>
