@@ -13,7 +13,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
     return (
       <div className="flex justify-end animate-fade-in-up">
         <div className="px-5 py-3 rounded-2xl shadow-md bg-orange-100 dark:bg-orange-900/50 text-gray-900 dark:text-gray-100 rounded-br-none max-w-lg">
-          <p className="text-lg">{message.text}</p>
+          <p className="text-lg break-words">{message.text}</p>
         </div>
       </div>
     );
@@ -27,10 +27,10 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
           </div>
       </div>
       <div className="px-5 py-3 rounded-2xl shadow-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 rounded-bl-none max-w-2xl">
-        <p className="text-lg mb-4 whitespace-pre-wrap">{message.text}</p>
+        <p className="text-lg mb-4 whitespace-pre-wrap break-words">{message.text}</p>
         {message.shloka && (
           <div className="mt-4 p-4 border-l-4 border-orange-400 bg-orange-50 dark:bg-gray-700/50 rounded-r-lg">
-            <p className="font-semibold text-lg italic text-orange-800 dark:text-orange-300 whitespace-pre-wrap">"{message.shloka}"</p>
+            <p className="font-semibold text-lg italic text-orange-800 dark:text-orange-300 whitespace-pre-wrap break-words">"{message.shloka}"</p>
           </div>
         )}
         {message.reference && (

@@ -59,7 +59,8 @@ const App: React.FC = () => {
 
   const handleExampleClick = (prompt: string) => {
     setInput(prompt);
-    document.querySelector('input[type="text"]')?.focus();
+    // Fix: Cast the result of `querySelector` to `HTMLInputElement` to access the `focus` method.
+    (document.querySelector('input[type="text"]') as HTMLInputElement)?.focus();
   };
   
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
