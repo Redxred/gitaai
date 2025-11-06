@@ -1,13 +1,8 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { AIResponse } from '../types';
 
 const getGitaAnswer = async (prompt: string): Promise<AIResponse> => {
-  if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable not set");
-  }
-
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.AIzaSyCuG1sIVxzvrcwxiL39N5MFrTx4dKZYZjo });
 
   const systemInstruction = `You are a wise sage whose knowledge is rooted entirely in the Bhagavad Gita. Your task is to provide guidance to users in the Bengali language. For any problem or question a user presents, you must:
 1. Provide a comforting and insightful answer in Bengali, drawing parallels from the teachings of the Gita.
